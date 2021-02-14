@@ -23,13 +23,15 @@ class SweepingBear:
 class Stone:
     """This is a curling stone class"""
 
-    def __init__(self, xposition, yposition, speed, angle):
+    def __init__(self, xposition, yposition, speed, angle,radius,acc):
         radius = 20
 
         self.xposition = xposition
         self.yposition = yposition
         self.angle = angle
         self.speed = speed
+        self.radius = radius
+        self.acc = acc
 
     def stoneCollison(self, stone, radius):
         if self.calculateDistance(stone) >= (radius * 2) ** 2:
