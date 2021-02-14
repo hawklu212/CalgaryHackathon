@@ -216,7 +216,7 @@ def main():
     bbsweep2 = pygame.image.load("Pictures/GB_sweep2.png")
     house = pygame.image.load("Pictures/House.png")
     rect = bear.get_rect()
-    pygame.display.set_caption("First Game")
+    pygame.display.set_caption("Bear Curling Game")
     clock = pygame.time.Clock()
     x = win.get_width() / 2 + stonepost.radius
     y = win.get_height() - stonepost.radius * 2
@@ -374,10 +374,19 @@ def main():
                 # set the center of the rectangular object.
                 textRect.center = (x // 2, y // 2)
                 win.fill((255, 255, 255))
+                win.blit(house, (xcache, ycache))
+                pygame.draw.circle(win, (0, 0, 0),
+                                   (x, y),
+                                   stonepost.radius)
                 win.blit(text, textRect)
 
                 swap = 1
                 distance = 0;
+                if iteration >= 16:
+                    swap = -9000
+                    run = False
+                    break;
+
                 y += 3 * (win.get_width() / 6)
                 stonepost.speed = random.randint(80, 120)
                 if (currTeam):
@@ -422,6 +431,10 @@ def main():
                 swap = 1
                 distance = 0;
                 y += 3 * (win.get_width() / 6)
+                if iteration >= 16:
+                    swap = -9000
+                    run = False
+                    break;
                 stonepost.speed = random.randint(80, 120)
                 if (currTeam):
                     arrayred.append((xcache - x) * (xcache - x) + (ycache - y) * (ycache - y))
@@ -463,6 +476,10 @@ def main():
 
                 swap = 1
                 distance = 0;
+                if iteration >= 4:
+                    swap = -9000
+                    run = False
+                    break;
                 stonepost.speed = random.randint(80, 120)
                 y += 3 * (win.get_width() / 6)
                 if (currTeam):
