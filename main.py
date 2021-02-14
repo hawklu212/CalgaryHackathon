@@ -215,7 +215,7 @@ def main(team):
 
                 # set the center of the rectangular object.
                 textRect.center = (x // 2, y // 2)
-                win.fill((255, 255, 255))
+               # win.fill((255, 255, 255))
                 win.blit(text, textRect)
 
                 swap = 1
@@ -258,7 +258,7 @@ def main(team):
 
                 # set the center of the rectangular object.
                 textRect.center = (x // 2, y // 2)
-                win.fill((255, 255, 255))
+                #win.fill((255, 255, 255))
                 win.blit(text, textRect)
 
                 swap = 1
@@ -300,7 +300,7 @@ def main(team):
 
                 # set the center of the rectangular object.
                 textRect.center = (x // 2, y // 2)
-                win.fill((255, 255, 255))
+                #win.fill((255, 255, 255))
                 win.blit(text, textRect)
 
                 swap = 1
