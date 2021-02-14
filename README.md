@@ -5,3 +5,7 @@ Source code Used:
 https://realpython.com/pygame-a-primer/
 https://www.pygame.org/docs/ref/mouse.html
 https://www.pygame.org/docs/ref/surface.html
+
+Instruction:
+
+press up arrow key to throw, hold left mouse button to curl
